@@ -1,0 +1,23 @@
+define(["module"],function(module){
+	"use strict";
+	module.exports={
+		"catchError":true,
+		"enforceDefine":true,
+		"waitSeconds":0,
+		"baseUrl":"/kwetl/src",
+		"paths":{
+			"text":"lib/requirejs/require.text"
+		},
+		"packages":[],
+		"config":{
+			"text":{
+			}
+		},
+		"map":{
+		},
+		"shim":{
+		},
+		"deps":[]
+	};
+	require.config(module.exports);
+});

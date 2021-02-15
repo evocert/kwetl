@@ -9,20 +9,17 @@
 	<body>
 	<script>
 		//demo
-		require([
-			"./config.js?cachebust="+new Date().getTime()
-			],
-			function(){
-				require([
-					"module",
-				],function(
-					module,
-				){
-					//main
-					alert('demo stub');
-				});
+		require(["./require.conf"],function(conf){require([
+			"module",
+			"text!./ini.js"
+			],function(
+				module,
+				conf
+			){
+				//main
+				console.log(conf);
 			}
-		);
+		);});
 	</script>
 	</body>
 </html>

@@ -1,0 +1,24 @@
+<@
+	//impl
+	var GOJA={};
+	try{
+  		//bootstrap config
+		require(["./config.goja.js"],function(){
+  			//main
+			require([
+				"module",
+				"app/goja/main"
+			],function(
+				module,
+				App
+			){
+				//main
+				println('impl stub');
+				var app=new App();
+			});
+		});
+
+	}catch(e){
+		println(e.toString());
+	}
+@>

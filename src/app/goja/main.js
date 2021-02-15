@@ -1,15 +1,15 @@
 //demo main
 define([
 	"module",
-	"../../vendor/demo/web/index"
+	"../../lib/demo/goja/index"
 ],function(
 	module,
 	demolib
 ){
 	"use strict";
 	function App(){
-		console.log("App:start");
-		console.log("App:end");
+		println("App:start");
+		println("App:end");
 	}
 	module.exports=App;
 });

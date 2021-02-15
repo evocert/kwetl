@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<!-- demo -->
+<html>
+	<head>
+		<meta charset="utf-8"/>
+		<title>Demo Stub</title>
+	 	<script src="/require.js"></script>
+	</head>
+	<body>
+	<script>
+		//demo
+		require([
+			"./config.js?cachebust="+new Date().getTime()
+			],
+			function(){
+				require([
+					"module",
+				],function(
+					module,
+				){
+					//main
+					alert('demo stub');
+				});
+			}
+		);
+	</script>
+	</body>
+</html>

@@ -1,5 +1,5 @@
 define(["module"],function(module){
-	var baseUrl="/kwetl/lib";
+	var baseUrl="./";
 	var modPath="";
 	var GOJA=true;
 	requirejs.config({

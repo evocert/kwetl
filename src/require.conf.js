@@ -36,6 +36,10 @@ define(["module"],function(module){
 			"jquery":"lib/jquery/jquery.3.5.1",
 			"jquery-private":"lib/jquery/jquery-private",
 			"css":"lib/requirecss/css",
+			//"domino":"lib/domino/domino",
+			"domino":"lib/domino/blocks/domino",
+			"window":"lib/kwe/window/index",
+			"document":"lib/kwe/document/index",
 		},
 		"packages":[],
 		"config":{
@@ -46,8 +50,27 @@ define(["module"],function(module){
 			"jquery-private":{"jquery":"jquery"},
 		},
 		"shim":{
+			/*
+			"domino":{
+				"deps":[],
+				"exports":"domino"
+			},
+			"window":{
+				"deps":[],
+				"exports":"window"
+			},
+			"document":{
+				"deps":["window"],
+				"exports":"document"
+			},
+			"jquery":{
+				"deps":["window"]//typeof(dbms)=="undefined"?[]:["window"]
+			}
+			*/
 		},
-		"deps":[]
+		"deps":[
+		]
 	};
 	require.config(module.exports);
 });
+

@@ -1,0 +1,28 @@
+//(function(global){
+define([
+	 "module"
+	,"lib/domino/blocks/domino"
+	//,"lib/domino/domino"
+],function(
+	 module
+	,domino
+){
+		global.window=domino.createWindow("");
+		global.document=global.window.document;
+		module.exports={
+			"window":global.window,
+			"document":global.document,
+		}
+	/*
+	*/
+	/*
+	if(typeof(window)=="undefined"){
+	}else{
+		module.exports={
+			"window":global.window,
+			"document":global.document,
+		}
+	}
+	*/
+});
+//})(this)

@@ -6,7 +6,7 @@
 		//initialize resource manager via conf
 		var rootname=conf.root_name;
 		//compute init.js base path                                     ....sort out...
-		var basepath=action().Path().split("/");basepath.pop();basepath="/mnt/c/tmp/www"+basepath.join("/");
-		resourcing.RegisterEndpoint(rootname,basepath);
+		//var basepath=action().Path().split("/");basepath.pop();basepath="/mnt/c/tmp/www"+basepath.join("/");
+		//resourcing.RegisterEndpoint(rootname,basepath);
 	});
 @>

@@ -1,6 +1,6 @@
 <@
 	require(["./require.conf"]);
-	require(["text!./ini.js"],function(conf){
+	require(["text!./conf.json"],function(conf){
 		var conf=JSON.parse(conf);
 		println(JSON.stringify(conf));
 		//initialize resource manager via conf

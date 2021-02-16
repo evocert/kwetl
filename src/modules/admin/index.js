@@ -1,19 +1,22 @@
-<div>
-	<h3>./modules/admin/index.html</h3>
-	<script>
-		console.log()
-		require([
-			"module",
-			"jquery",
-			"text!conf.json",
-		],function(
-			module,
-			jq,
-			conf,
-		){
-			$=jq;
-			conf=JSON.parse(conf);
-			var nod=$("#contents");
+define([
+	"module",
+	"jquery",
+	"text!conf.json",
+],function(
+	module,
+	jq,
+	conf,
+){
+	module.exports=function(){
+		$=jq;
+		conf=JSON.parse(conf);
+		var nod=$("#contents");//scan out
+		//var scriptTag = document.getElementsByTagName('script');
+		//scriptTag = scriptTag[scriptTag.length - 1];
+		//var parentTag = scriptTag.parentNode;
+		//var nod=$(parentTag )
+		//var nod=$(document.scripts[document.scripts.length - 1].parentNode);
+		{
 			var table=$("<table/>").addClass(["table","table-sm","table-striped"]).attr({"id":"tbl_conf"});
 			Object.keys(conf).forEach(function(k,kidx){
 				var tr=$("<tr/>").attr({"id":k});
@@ -60,6 +63,6 @@
 			tr.append($("<td/>"));
 			table.append(tr);
 			nod.append(table);
-		});
-	</script>
-</div>
+		}
+	}
+});

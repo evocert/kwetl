@@ -1,19 +1,30 @@
 define([
 	"module",
-	"jquery",
+	//"jquery",
+	"./modules/ui/index.js",
+	"text!./conf.json",
+	/*
 	"text!./modules/ui/layouts/main.html",
 	"text!./modules/admin/index.html",
 	"text!./modules/admin/config/index.html",
 	"css!./lib/bootswatch/4.5.2/slate/bootstrap.min.css",
 	"css!./modules/ui/css/style.css"
+	*/
 	],function(
 		module,
-		jq,
+		//jq,
+		ui,
+		conf,
+		/*
 		tpl_layout,
 		tpl_admin,
 		tpl_config
+		*/
 	){
+		conf=JSON.parse(conf);
+		ui(conf);
 		//main
+		/*
 		$=jq;
 		tpl_layout=$(tpl_layout);
 		tpl_admin=$(tpl_admin);
@@ -21,5 +32,6 @@ define([
 		tpl_layout.find("#contents").append(tpl_admin);
 		tpl_admin.find("#contents").append(tpl_config);
 		$("body").find("#contents").append(tpl_layout);
+		*/
 	}
 );

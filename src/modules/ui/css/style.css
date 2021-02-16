@@ -1,0 +1,20 @@
+.form-control{
+	background: #3f444c;
+	color: #888888;
+	border-radius: unset;
+	border: 0px;
+}
+.form-control:focus {
+	color: #999999!important;
+	background-color: #4F555d!important;
+	border-color: #757f89;
+	outline: 0;
+	box-shadow: 0 0 0 .2rem rgba(58,63,68,.25);
+}
+.btn{
+	background: #3f444c;
+	color: #888888;
+	border-radius: unset;
+	border: 0px;
+
+}

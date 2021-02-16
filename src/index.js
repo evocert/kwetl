@@ -1,16 +1,25 @@
-//demo
-require([
-	"./config.js?cachebust="+new Date().getTime()
-	],
-	function(){
-		require([
-			"module",
-		],function(
-			module,
-		){
-			//main
-			alert('demo stub');
-		});
+define([
+	"module",
+	"jquery",
+	"text!./modules/ui/layouts/main.html",
+	"text!./modules/admin/index.html",
+	"text!./modules/admin/config/index.html",
+	"css!./lib/bootswatch/4.5.2/slate/bootstrap.min.css",
+	"css!./modules/ui/css/main.css"
+	],function(
+		module,
+		jq,
+		tpl_layout,
+		tpl_admin,
+		tpl_config
+	){
+		//main
+		$=jq;
+		tpl_layout=$(tpl_layout);
+		tpl_admin=$(tpl_admin);
+		tpl_config=$(tpl_config);
+		tpl_layout.find("#contents").append(tpl_admin);
+		tpl_admin.find("#contents").append(tpl_config);
+		$("body").append(tpl_layout);
 	}
 );
-

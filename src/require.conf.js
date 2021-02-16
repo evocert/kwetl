@@ -6,14 +6,19 @@ define(["module"],function(module){
 		"waitSeconds":0,
 		"baseUrl":"/kwetl/src",
 		"paths":{
-			"text":"lib/requirejs/require.text"
+			"kwe.rebase":"lib/kwe/rebase/index",
+			"text":"lib/requirejs/require.text",
+			"jquery":"lib/jquery/jquery.3.5.1",
+			"jquery-private":"lib/jquery/jquery-private",
+			"css":"lib/requirecss/css",
 		},
 		"packages":[],
 		"config":{
-			"text":{
-			}
+			"text":{}
 		},
 		"map":{
+			"*":{},
+			"jquery-private":{"jquery":"jquery"},
 		},
 		"shim":{
 		},

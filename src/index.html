@@ -7,19 +7,6 @@
 	 	<script src="/require.js"></script>
 	</head>
 	<body>
-	<script>
-		//demo
-		require(["./require.conf"],function(conf){require([
-			"module",
-			"text!./ini.js"
-			],function(
-				module,
-				conf
-			){
-				//main
-				console.log(conf);
-			}
-		);});
-	</script>
+	<script>require(["./require.conf"],function(conf){require(["./index"]);});</script>
 	</body>
 </html>

@@ -5,7 +5,7 @@ define([
 	"text!./modules/admin/index.html",
 	"text!./modules/admin/config/index.html",
 	"css!./lib/bootswatch/4.5.2/slate/bootstrap.min.css",
-	"css!./modules/ui/css/main.css"
+	"css!./modules/ui/css/style.css"
 	],function(
 		module,
 		jq,

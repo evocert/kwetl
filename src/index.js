@@ -20,6 +20,6 @@ define([
 		tpl_config=$(tpl_config);
 		tpl_layout.find("#contents").append(tpl_admin);
 		tpl_admin.find("#contents").append(tpl_config);
-		$("body").append(tpl_layout);
+		$("body").find("#contents").append(tpl_layout);
 	}
 );

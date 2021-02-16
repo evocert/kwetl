@@ -1,7 +1,14 @@
 define(["module"],function(module){
 	"use strict";
 	var baseUrl=typeof(dbms)=="undefined"?
-		"/kwetl/src":
+		(function(){
+			var ret=window.location.pathname.split("/");
+			if(ret[2]=="src"){
+				return ["/",ret.slice(1,3).join("/")].join("")
+			}else{
+				return ["/",ret.slice(1,2)].join("")
+			}
+		})():
 		(function(){
 			var ret=action().Path().split("/");
 			if(ret[2]=="src"){
@@ -17,8 +24,8 @@ define(["module"],function(module){
 	}else{
 		console.log(baseUrl);
 	}
-	
 	module.exports={
+		"useParseEval":false,
 		"catchError":true,
 		"enforceDefine":true,
 		"waitSeconds":0,

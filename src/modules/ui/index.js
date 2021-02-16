@@ -22,7 +22,9 @@ define([
 		Object.keys(conf.modules).forEach(function(k,kidx){
 			navigation.append(
 				$("<button/>").addClass(["btn","btn-sm"]).text(k).click(function(){
-					require(["text!"+conf.modules[k].ui.entry],function(template){
+					contents.empty();
+					contents.append($("<h3/>").text("Loading..."));
+					require(["text!"+conf.modules[k].ui.entry+"?cachebust="+(new Date().getTime())],function(template){
 						contents.empty();
 						contents.append($(template));
 					});

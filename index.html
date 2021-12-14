@@ -13,7 +13,16 @@
     <script src='main.js'></script>
 </head>
 <body>
-    <@ var tbarsttngs={"id":"testbar","actions":[{"caption":"bla","action":`((btn)=>{ alert($(btn).html());})(this)`}]}; 
-    @><#widget|toolbar{@tbarsttngs@}/>
+    <div id="main">
+        <@ var tbarsttngs={
+            "id":"testbar",
+            "action":``,
+            "actions":[
+                {"caption":"Settings","action":`((btn)=>{ alert($(btn).html());})(this)`,"icon":"mdi mdi-server-security"},
+                {"caption":"Queues","action":`((btn)=>{ alert($(btn).html());})(this)`},
+                {"caption":"Monitoring","action":`((btn)=>{ alert($(btn).html());})(this)`}
+                ]}; 
+        @><#widget|toolbar{@tbarsttngs@}/>
+    </div>
 </body>
 </html>

@@ -1,7 +1,14 @@
 <@ 
     if (button===undefined) {
         var button=(buttonsttngs)=>{
-           print(`<button id="${buttonsttngs.id}" onclick="${buttonsttngs.action}">${buttonsttngs.caption}</button>`);
+            var icon=buttonsttngs.icon;
+            
+            if (icon===undefined) {
+                icon="";
+            } else if (icon!=="") {
+                icon=`<span class="${icon}"></span> `;
+            }
+           print(`<button id="${buttonsttngs.id}" onclick="${buttonsttngs.action}">${icon}${buttonsttngs.caption}</button>`);
            print(`<script>$('#${buttonsttngs.id}').button();</script>`);
         };
     }

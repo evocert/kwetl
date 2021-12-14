@@ -1,0 +1,16 @@
+{
+	"working_path":"./",
+	"root_name":"/newbase",
+	"modules":{
+		"admin":{
+			"ui":{
+				"entry":"./modules/admin/index.html"
+			}
+		},
+		"dbms":{
+			"ui":{
+				"entry":"./modules/dbms/index.html"
+			}
+		}
+	}
+}

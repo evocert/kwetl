@@ -1,0 +1,15 @@
+<@ 
+    if (toolbar===undefined) {
+        var toolbar=(tbarsttngs)=>{
+            var id=tbarsttngs["id"];
+            @><div id="<@print(tbarsttngs["id"]);@>" class="toolbar"><@
+               tbarsttngs["actions"].forEach(function(tbv,tvi){
+                    tbv["id"]=(id+tvi);
+                   @><#.|button{@tbv@}/><@
+                });
+            @></div><@
+            print(`<script>$('#${id}').controlgroup();</script>`);
+        };
+    }
+    toolbar(arguments[0]);
+@>

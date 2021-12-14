@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>KWE ETL</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <#|materialdesign|html|head/>
+    <#|roboto|html|head/>
+    <#|webactions|html|head/>
+    <#|jquery-ui|html|head/>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <@ var tbarsttngs={"id":"testbar","actions":[{"caption":"bla","action":`((btn)=>{ alert($(btn).html());})(this)`}]}; 
+    @><#widget|toolbar{@tbarsttngs@}/>
+</body>
+</html>

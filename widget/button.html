@@ -1,0 +1,9 @@
+<@ 
+    if (button===undefined) {
+        var button=(buttonsttngs)=>{
+           print(`<button id="${buttonsttngs.id}" onclick="${buttonsttngs.action}">${buttonsttngs.caption}</button>`);
+           print(`<script>$('#${buttonsttngs.id}').button();</script>`);
+        };
+    }
+    button(arguments[0]);
+@>
